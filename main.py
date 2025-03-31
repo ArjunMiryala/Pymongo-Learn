@@ -15,7 +15,10 @@ post = {"_id":1, "name": "Bharadwaj", "favNum": 29 } # _id will be automatically
 post2 = {"_id":2 , "name" : "Koutiya", "favNum": 8}
 post3 = {"_id":3 , "name": "PrabhaDevi", "favNum": 3}
 post4 = {"_id": 4 , "name": "Jagadeshweer", "favNum": 2}
+post4 = {"_id": 5, "Module":"TEsting in the meeting"}
+post5 = {"_id": 6, "Module":"Meeting in the test"}
 
+# collection.insert_many([post5,post4]) 
 #collection.insert_many([post2, post3, post4])  # insert_many for insering multiple posts
 
 # TO FIND INFORMATION
@@ -49,7 +52,7 @@ results_all = collection.find({}) #returns everything Because everybting in the 
 for x in results_all:
     print(x)        #prints everything
 
-result_update = collection.update_one({"_id":4}, {"$set" : {"name" : "Jagadesh"}})       # if the name field exists it will replace present value with Jagadesh and also this is used to update 
+result_update = collection.update_one({"_id":4}, {"$set" : {"name" : "FRANK"}})       # if the name field exists it will replace present value with Jagadesh and also this is used to update 
 # but if the name fied doesm't existit will create and store it, example below
 result_update_second = collection.update_one({"_id":1},{"$set":{"city":"Hyderabad"}} )
 # we can also use update many to update dcoumets 
